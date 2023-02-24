@@ -5,7 +5,6 @@ import { getGreeter } from '../redux/Greetings/Greetings';
 const Greeting = () => {
   const dispatch = useDispatch();
   const greetings = useSelector((state) => state.Greetings);
-
   useEffect(() => {
     dispatch(getGreeter());
   }, [dispatch]);
@@ -13,7 +12,9 @@ const Greeting = () => {
   return (
     <div>
 
-      <h1>{greetings.message}</h1>
+      <h1>
+        {greetings}
+      </h1>
 
     </div>
   );
